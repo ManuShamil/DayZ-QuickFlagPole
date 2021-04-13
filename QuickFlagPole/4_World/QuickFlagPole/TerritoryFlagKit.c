@@ -9,9 +9,9 @@ modded class TerritoryFlagKit {
 			totem.SetOrientation( orientation );
 
 			// Upgrade parts
-			totem.GetConstruction().BuildPartServer( player, "base", AT_BUILD_PART );
-			totem.GetConstruction().BuildPartServer( player, "support", AT_BUILD_PART );
-			totem.GetConstruction().BuildPartServer( player, "pole", AT_BUILD_PART );
+			totem.GetConstruction().GetParent().OnPartBuiltServer( player, "base", AT_BUILD_PART );
+			totem.GetConstruction().GetParent().OnPartBuiltServer( player, "support", AT_BUILD_PART );
+			totem.GetConstruction().GetParent().OnPartBuiltServer( player, "pole", AT_BUILD_PART );
 			
 			// Automatically add a default flag
 			totem.GetInventory().CreateAttachment("Flag_Chernarus");
