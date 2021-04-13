@@ -24,9 +24,11 @@ modded class TerritoryFlagKit {
 
 			SetIsDeploySound( true );
 
-		}
+			this.Delete();
 
-		this.Delete();
+			Print( this );
+
+		}
 	}
 
 }
