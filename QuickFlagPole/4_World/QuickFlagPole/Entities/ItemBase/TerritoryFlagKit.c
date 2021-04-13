@@ -5,8 +5,6 @@ modded class TerritoryFlagKit {
 		if ( GetGame().IsServer() )
 		{
 
-			this.Delete();
-
 			//Create TerritoryFlag
 			TerritoryFlag totem = TerritoryFlag.Cast( GetGame().CreateObjectEx( "TerritoryFlag", GetPosition(), ECE_PLACE_ON_SURFACE ) );
 			totem.SetPosition( position );
@@ -19,17 +17,11 @@ modded class TerritoryFlagKit {
 			
 			// Automatically add a default flag
 			totem.GetInventory().CreateAttachment("Flag_Chernarus");
-
-			totem.AnimateFlag( 0 );
-			totem.AddRefresherTime01( 1 );
 			
 			//make the kit invisible, so it can be destroyed from deploy UA when action ends
 			HideAllSelections();
 
 			SetIsDeploySound( true );
-
-
-			Print( this );
 
 		}
 	}
