@@ -1,0 +1,57 @@
+{
+    "name": "QuickFlagPole",
+    "game_dir": "C:/Program Files (x86)/Steam/steamapps/common/DayZ",
+    "profile": "DEV",
+    "project_files": {
+        "image": [],
+        "widget": [],
+        "core": [],
+        "gameLib": [],
+        "game": [
+            "QuickFlagPole/3_Game"
+        ],
+        "world": [
+            "QuickFlagPole/4_World"
+        ],
+        "mission": [
+            "QuickFlagPole/5_Mission"
+        ]
+    },
+    "dependencies": [
+        {
+            "comments": "for custom pbos with no pre existing templates",
+            "type": "pbo",
+            "path": "C:/Program Files (x86)/Steam/steamapps/common/DayZ/!Workshop/@CF/Addons/Scripts.pbo",
+            "project_files": {
+                "core": [
+                    "JM/CF/Scripts/1_Core"
+                ],
+                "gameLib": [
+                    
+                ],
+                "game": [
+                    "JM/CF/Scripts/3_Game"
+                ],
+                "world": [
+                    "JM/CF/Scripts/4_World"
+                ],
+                "mission": [
+                    "JM/CF/Scripts/5_Mission"
+                ]
+            }
+        },
+        {
+            "noLoad": true,
+            "comments": "for custom pbos with no pre existing templates",
+            "type": "pbo",
+            "path": "C:/Program Files (x86)/Steam/steamapps/common/DayZ/!Workshop/@VPPAdminTools/Addons/VPPAdminTools.pbo",
+            "project_files": {
+            }
+        },
+        {
+            "comments": "points to a path with already existing template for settings (gets autoresolved after reading)",
+            "type": "setting",
+            "path": "cf_xml.json"
+        }
+    ]
+}
