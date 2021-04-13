@@ -22,11 +22,11 @@ modded class TerritoryFlagKit {
 			//make the kit invisible, so it can be destroyed from deploy UA when action ends
 			HideAllSelections();
 
-			this.Delete();
-			
 			SetIsDeploySound( true );
 
 		}
+
+		this.Delete();
 	}
 
 }
