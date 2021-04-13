@@ -1,4 +1,5 @@
 modded class BaseBuildingBase {
+
     //CONSTRUCTION EVENTS
 	//Build
 	void OnQuickPartBuiltServer( notnull Man player, string part_name, int action_id )
@@ -10,8 +11,6 @@ modded class BaseBuildingBase {
 		{
 			SetBaseState( true );
 			
-			//spawn kit
-			//CreateConstructionKit();
 		}
 			
 		//register constructed parts for synchronization
