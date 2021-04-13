@@ -1,17 +1,11 @@
 modded class BaseBuildingBase {
 
-    //CONSTRUCTION EVENTS
-	//Build
-	void OnQuickPartBuiltServer( notnull Man player, string part_name, int action_id )
-	{
+	void OnQuickPartBuiltServer( notnull Man player, string part_name, int action_id ) {
 		ConstructionPart constrution_part = GetConstruction().GetConstructionPart( part_name );
 		
 		//check base state
 		if ( constrution_part.IsBase() )
-		{
 			SetBaseState( true );
-			
-		}
 			
 		//register constructed parts for synchronization
 		RegisterPartForSync( constrution_part.GetId() );

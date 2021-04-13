@@ -2,8 +2,7 @@ modded class TerritoryFlagKit {
 		
 	override void OnPlacementComplete( Man player, vector position = "0 0 0", vector orientation = "0 0 0" ) {
 
-		if ( GetGame().IsServer() )
-		{
+		if ( GetGame().IsServer() ) {
 
 			//Create TerritoryFlag
 			TerritoryFlag totem = TerritoryFlag.Cast( GetGame().CreateObjectEx( "TerritoryFlag", GetPosition(), ECE_PLACE_ON_SURFACE ) );
