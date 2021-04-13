@@ -9,10 +9,15 @@ modded class TerritoryFlagKit {
 			totem.SetOrientation( orientation );
 
 			// Upgrade parts
+			totem.GetConstruction().QuickBuildPartServer( player, "base", AT_BUILD_PART );
+			totem.GetConstruction().QuickBuildPartServer( player, "support", AT_BUILD_PART );
 			totem.GetConstruction().QuickBuildPartServer( player, "pole", AT_BUILD_PART );
 			
 			// Automatically add a default flag
 			totem.GetInventory().CreateAttachment("Flag_Chernarus");
+			
+			totem.AnimateFlag( 1 );
+			totem.AddRefresherTime01( 1 - totem.GetAnimationPhase("flag_mast") );
 			
 			//make the kit invisible, so it can be destroyed from deploy UA when action ends
 			HideAllSelections();

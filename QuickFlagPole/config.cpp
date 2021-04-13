@@ -23,11 +23,6 @@ class CfgMods
                 value = "";
                 files[] = {"QuickFlagPole\4_World"};
             };
-            class missionScriptModule
-            {
-                value = "";
-                files[] = {"QuickFlagPole\5_Mission"};
-            };
         };
     };
 };
